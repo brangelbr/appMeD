@@ -251,7 +251,7 @@ const Dashboard = ({ processes, onChangeTab, onSelect }: { processes: Process[],
           
           {/* Aquiles Blockchain System Link */}
           <Card 
-            className="col-span-2 flex flex-row items-center justify-between p-4 border-0 bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow-lg shadow-sky-200 dark:shadow-none transform active:scale-95 transition-all" 
+            className="col-span-2 flex flex-row items-center justify-between p-4 border-0 bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-200 dark:shadow-none transform active:scale-95 transition-all" 
             onClick={() => window.open('https://www.authoradigital.com.br/', '_blank')}
           >
             <div className="flex items-center gap-4">
@@ -260,10 +260,10 @@ const Dashboard = ({ processes, onChangeTab, onSelect }: { processes: Process[],
                 </div>
                 <div className="flex flex-col text-left">
                     <span className="text-sm font-bold text-white tracking-wide">Authora - Blockchain</span>
-                    <span className="text-xs text-blue-50 font-medium">Registre obras, ideias, músicas, etc...</span>
+                    <span className="text-xs text-emerald-50 font-medium">Registre obras, ideias, músicas, etc...</span>
                 </div>
             </div>
-            <ExternalLink size={18} className="text-blue-100" />
+            <ExternalLink size={18} className="text-emerald-100" />
           </Card>
         </div>
       </div>
@@ -1043,7 +1043,7 @@ const Profile = ({ user, onLogout, darkMode, onToggleTheme, onOpenMessages }: { 
     <div className="space-y-2 mt-6">
       <Card className="flex justify-between items-center p-4" onClick={onOpenMessages}>
          <div className="flex items-center gap-3">
-             <div className="p-1.5 rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300">
+             <div className="p-1.5 rounded-full bg-brand-100 text-brand-600 dark:bg-brand-900 dark:text-brand-300">
                  <MessageSquare size={18} />
              </div>
              <span className="dark:text-white">Minhas Mensagens</span>
