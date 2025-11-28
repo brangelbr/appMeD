@@ -14,7 +14,9 @@ export const Logo: React.FC<{ size?: number; className?: string; variant?: 'bran
   const grayStroke = isWhite ? '#FFFFFF' : '#6c757e';
   const greenFill = isWhite ? '#FFFFFF' : '#2fb670';
   const greenStroke = isWhite ? '#FFFFFF' : '#2fb670';
-  const textFill = isWhite ? '#FFFFFF' : '#2f2f2f';
+  
+  // Use tailwind classes for text fill to handle dark mode easily
+  const textClass = isWhite ? 'fill-white' : 'fill-[#2f2f2f] dark:fill-[#979595]';
 
   return (
     <svg 
@@ -37,8 +39,8 @@ export const Logo: React.FC<{ size?: number; className?: string; variant?: 'bran
           <path d="M327.444,397.694l-157.167,-150l-0.5,126l157.667,150.5l534.833,-509.971l-94.037,0c-30.015,3.273 -50.581,12.846 -64.596,26.786l-376.201,356.685Z" style={{fill:greenFill, stroke:greenStroke, strokeWidth:'1px'}}/>
         </g>
         <g transform="matrix(8.082154,0,0,8.082154,-8407.109997,-2676.128872)">
-          <text x="1151.944px" y="365.277px" style={{fontFamily:"'Haettenschweiler', sans-serif", fontSize:'46.275px', fill: textFill}}>Marca</text>
-          <text x="1151.944px" y="404.286px" style={{fontFamily:"'Haettenschweiler', sans-serif", fontSize:'46.275px', fill: textFill}}>em dia</text>
+          <text x="1151.944px" y="365.277px" className={textClass} style={{fontFamily:"'Haettenschweiler', sans-serif", fontSize:'46.275px'}}>Marca</text>
+          <text x="1151.944px" y="404.286px" className={textClass} style={{fontFamily:"'Haettenschweiler', sans-serif", fontSize:'46.275px'}}>em dia</text>
         </g>
       </g>
     </svg>
@@ -194,7 +196,7 @@ export const Button: React.FC<{
 
 export const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string }> = ({ label, error, className, ...props }) => (
   <div className="mb-4">
-    <label className="block text-sm font-medium text-white mb-1 dark:text-slate-300">{label}</label>
+    <label className="block text-sm font-medium text-slate-700 mb-1 dark:text-slate-300">{label}</label>
     <input
       className={`w-full px-4 py-3 rounded-lg border ${
         error 
